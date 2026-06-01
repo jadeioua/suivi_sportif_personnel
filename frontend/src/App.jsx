@@ -35,7 +35,7 @@ function App() {
       {page === "seances" && <Seances />}
       {page === "objectifs" && <Objectifs />}
       {page === "ajout-seance" && <AjoutSeance />}
-      {page === "detail-seance" && <DetailSeance seanceId={3} />}
+      {page === "detail-seance" && <DetailSeance seanceId={5} />}
     </div>
   );
 }

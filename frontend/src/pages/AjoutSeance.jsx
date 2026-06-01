@@ -6,6 +6,7 @@ function AjoutSeance() {
   const [duree, setDuree] = useState("");
   const [note, setNote] = useState("");
   const [commentaire, setCommentaire] = useState("");
+  const [distanceKm, setDistanceKm] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +17,11 @@ function AjoutSeance() {
       duree_minutes: Number(duree),
       note_ressenti: Number(note),
       commentaire: commentaire,
-      exercices: []
+      exercices: [
+        {
+            type_exercice_id: 1,
+            distance_km: Number(distanceKm)
+        }]
     };
 
     const response = await fetch(
@@ -73,6 +78,15 @@ function AjoutSeance() {
           placeholder="Commentaire"
           value={commentaire}
           onChange={(e) => setCommentaire(e.target.value)}
+        />
+
+        <br /><br />
+
+        <input
+           type="number"
+           placeholder="Distance (km)"
+           value={distanceKm}
+           onChange={(e) => setDistanceKm(e.target.value)}
         />
 
         <br /><br />
