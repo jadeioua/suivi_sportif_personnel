@@ -203,3 +203,8 @@ def update_objectif(id):
     db.session.commit()
 
     return objectif.to_dict()
+
+@main.route("/objectifs", methods=["GET"])
+def get_objectifs():
+    objectifs = Objectif.query.all()
+    return [objectif.to_dict() for objectif in objectifs]
