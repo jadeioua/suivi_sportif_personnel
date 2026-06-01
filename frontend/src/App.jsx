@@ -3,6 +3,8 @@ import Dashboard from "./pages/Dashboard";
 import Seances from "./pages/Seances";
 import Objectifs from "./pages/Objectifs";
 import AjoutSeance from "./pages/AjoutSeance";
+import "./App.css";
+
 
 function App() {
   const [page, setPage] = useState("dashboard");
